@@ -20,3 +20,4 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::post('/experiment', [\App\Http\Controllers\ExperimentController::class, 'add']);
+Route::get('/experiments', [\App\Http\Controllers\ExperimentController::class, 'getAll']);

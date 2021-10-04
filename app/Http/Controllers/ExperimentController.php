@@ -37,4 +37,20 @@ class ExperimentController extends Controller
             ];
         }
     }
+
+    public function getAll()
+    {
+        try {
+            $experiments = Experiment::select('*')->get()->all();
+            return [
+                'status' => 'ok',
+                'experiments' => $experiments
+            ];
+        } catch (Exception $e) {
+            return [
+                'status' => false,
+                'msg' => $e->getMessage() . ' on line ' . $e->getLine()
+            ];
+        }
+    }
 }
