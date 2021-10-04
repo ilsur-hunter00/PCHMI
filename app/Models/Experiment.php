@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Experiment extends Model
 {
-    protected $table = 'experiments';
+    protected $table = 'experiment';
     protected $primaryKey = 'id';
     public $timestamps = true;
     const CREATED_AT = 'created_at';
