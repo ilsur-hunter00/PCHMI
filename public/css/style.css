@@ -1,0 +1,12 @@
+body {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: auto;
+    text-align: center;
+}
+
+.begin-button {
+    width: 300px;
+    margin-top: 200px;
+}
