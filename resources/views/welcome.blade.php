@@ -420,6 +420,10 @@
         .numbers {
             font-size: 35px;
         }
+
+        .picto {
+            font-size: 55px;
+        }
     </style>
 </head>
 

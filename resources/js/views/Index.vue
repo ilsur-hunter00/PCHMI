@@ -1,11 +1,11 @@
 <template>
     <div>
-        <numbers-window :numbers='numbers' />
+        <pictograms-window :numbers='numbers' />
     </div>
 </template>
 
 <script>
-import NumbersWindow from "../components/NumbersWindow";
+import PictogramsWindow from "../components/PictogramsWindow";
 
 export default {
     data() {
@@ -14,7 +14,7 @@ export default {
         }
     },
     components: {
-        NumbersWindow
+        PictogramsWindow
     }
 }
 </script>

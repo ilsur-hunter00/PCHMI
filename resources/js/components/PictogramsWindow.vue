@@ -1,13 +1,12 @@
 <template>
     <div class="main-window">
-
-        <div class="pos-a numbers"
+        <div
+            class="pos-a picto"
             v-for="item in numbersObjs"
             :key="item.num"
-            :style="{left: item.pos.left + 'px', top: item.pos.top + 'px'}"
-        >
-            {{ item.num }}
-        </div>
+            :style="{ left: item.pos.left + 'px', top: item.pos.top + 'px' }"
+            v-html="pictograms[item.num]"
+        ></div>
     </div>
 </template>
 
@@ -17,6 +16,18 @@ export default {
     data() {
         return {
             numbersObjs: [],
+            pictograms: [
+                "&#8857;",
+                "&#8739;",
+                "&#8758;",
+                "&#8895;",
+                "&#8865;",
+                "&#9734;",
+                "&#9794;",
+                "&#8504;",
+                "&#8734;",
+                "&#8816;",
+            ],
         };
     },
     methods: {
@@ -30,8 +41,11 @@ export default {
             while (flag) {
                 let isCorrect = true;
                 left = this.getRandomArbitrary(100, 700);
-                this.numbersObjs.forEach(obj => {
-                    if (obj.pos.left >= (left - 40) && obj.pos.left <= (left + 40)) {
+                this.numbersObjs.forEach((obj) => {
+                    if (
+                        obj.pos.left >= left - 60 &&
+                        obj.pos.left <= left + 60
+                    ) {
                         isCorrect = false;
                     }
                 });
@@ -40,15 +54,15 @@ export default {
             flag = true;
             while (flag) {
                 let isCorrect = true;
-                top = this.getRandomArbitrary(50, 550);
-                this.numbersObjs.forEach(obj => {
-                    if (obj.pos.top >= (top - 40) && obj.pos.top <= (top + 40)) {
+                top = this.getRandomArbitrary(50, 500);
+                this.numbersObjs.forEach((obj) => {
+                    if (obj.pos.top >= top - 60 && obj.pos.top <= top + 60) {
                         isCorrect = false;
                     }
                 });
                 if (isCorrect) flag = false;
             }
-            return {left, top};
+            return { left, top };
         },
     },
     beforeMount() {
@@ -61,8 +75,8 @@ export default {
         });
     },
     mounted() {
-        console.log(this.numbers)
-    }
+        console.log(this.numbers);
+    },
 };
 </script>
 
