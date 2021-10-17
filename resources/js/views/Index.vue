@@ -1,11 +1,12 @@
 <template>
     <div>
-        <pictograms-window :numbers='numbers' />
+        <words-window :numbers='numbers' />
     </div>
 </template>
 
 <script>
-import PictogramsWindow from "../components/PictogramsWindow";
+
+import WordsWindow from "../components/WordsWindow";
 
 export default {
     data() {
@@ -14,7 +15,7 @@ export default {
         }
     },
     components: {
-        PictogramsWindow
+        WordsWindow
     }
 }
 </script>

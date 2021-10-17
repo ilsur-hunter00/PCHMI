@@ -22,6 +22,7 @@ window.Vue = require('vue').default;
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('numbers-window', require('./components/NumbersWindow.vue').default);
 Vue.component('pictograms-window', require('./components/PictogramsWindow.vue').default);
+Vue.component('words-window', require('./components/WordsWindow.vue').default);
 Vue.component('index', require('./views/Index.vue').default);
 
 /**

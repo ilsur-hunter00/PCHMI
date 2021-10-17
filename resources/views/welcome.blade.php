@@ -424,6 +424,10 @@
         .picto {
             font-size: 55px;
         }
+
+        .words {
+            font-size: 35px;
+        }
     </style>
 </head>
 
