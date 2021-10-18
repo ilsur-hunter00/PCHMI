@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <style>
         /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
         html {
@@ -427,6 +428,30 @@
 
         .words {
             font-size: 35px;
+        }
+
+        .result-window {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .result-descr {
+            margin-bottom: 20px;
+        }
+
+        .result-input {
+            margin: auto;
+
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .result-input:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        .bold-words {
+            font-weight: bold;
         }
     </style>
 </head>

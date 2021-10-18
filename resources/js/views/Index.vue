@@ -7,6 +7,7 @@
 <script>
 
 import WordsWindow from "../components/WordsWindow";
+// import ResultForm from "../components/ResultForm";
 
 export default {
     data() {
