@@ -2170,8 +2170,6 @@ __webpack_require__.r(__webpack_exports__);
         pos: pos
       });
     });
-  },
-  mounted: function mounted() {// console.log(this.numbers)
   }
 });
 
@@ -2258,9 +2256,6 @@ __webpack_require__.r(__webpack_exports__);
         pos: pos
       });
     });
-  },
-  mounted: function mounted() {
-    console.log(this.numbers);
   }
 });
 
@@ -2452,8 +2447,6 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   mounted: function mounted() {
-    console.log(this.numbers);
-
     if (this.font == 'bold') {
       this.fontStyles.fontWeight = 'bold';
     } else if (this.font == 'italic') {
@@ -2595,6 +2588,11 @@ __webpack_require__.r(__webpack_exports__);
           this.show.cursive = !this.show.cursive;
           break;
       }
+    },
+    send: function send() {
+      axios.post('/api/experiment', this.result).then(function (res) {
+        console.log(res);
+      });
     }
   },
   watch: {
@@ -2612,9 +2610,12 @@ __webpack_require__.r(__webpack_exports__);
           _this.show.form = true;
         }, 2000);
       } else if (val == 9) {
-        console.log(this.result);
+        this.send();
       }
     }
+  },
+  mounted: function mounted() {
+    this.send();
   },
   components: {
     ResultForm: _components_ResultForm_vue__WEBPACK_IMPORTED_MODULE_2__["default"],

@@ -79,8 +79,6 @@ export default {
         });
     },
     mounted() {
-        console.log(this.numbers);
-
         if (this.font == 'bold') {
             this.fontStyles.fontWeight = 'bold';
         } else if (this.font == 'italic') {

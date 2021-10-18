@@ -118,6 +118,11 @@ export default {
                     this.show.cursive = !this.show.cursive;
                     break;
             }
+        },
+        send() {
+            axios.post('/api/experiment', this.result).then(res => {
+                console.log(res);
+            })
         }
     },
     watch: {
@@ -131,9 +136,12 @@ export default {
                     this.show.form = true;
                 }, 2000);
             } else if (val == 9) {
-                console.log(this.result);
+                this.send();
             }
         },
+    },
+    mounted() {
+        this.send();
     },
     components: {
         ResultForm,
