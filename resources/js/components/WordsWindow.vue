@@ -1,5 +1,5 @@
 <template>
-    <div class="main-window">
+    <div class="main-window" :style="fontStyles">
         <div
             class="pos-a words"
             v-for="item in numbersObjs"
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-    props: ["numbers"],
+    props: ["numbers", "font"],
     data() {
         return {
             numbersObjs: [],
@@ -28,6 +28,10 @@ export default {
                 "Восемь",
                 "Девять",
             ],
+            fontStyles: {
+                fontStyle: 'normal',
+                fontWeight: 'normal'
+            }
         };
     },
     methods: {
@@ -76,6 +80,12 @@ export default {
     },
     mounted() {
         console.log(this.numbers);
+
+        if (this.font == 'bold') {
+            this.fontStyles.fontWeight = 'bold';
+        } else if (this.font == 'italic') {
+            this.fontStyles.fontStyle = 'italic';
+        }
     },
 };
 </script>
