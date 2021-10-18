@@ -24,6 +24,7 @@ Vue.component('numbers-window', require('./components/NumbersWindow.vue').defaul
 Vue.component('pictograms-window', require('./components/PictogramsWindow.vue').default);
 Vue.component('words-window', require('./components/WordsWindow.vue').default);
 Vue.component('result-form', require('./components/ResultForm.vue').default);
+Vue.component('start-form', require('./components/StartForm.vue').default);
 Vue.component('index', require('./views/Index.vue').default);
 
 /**
